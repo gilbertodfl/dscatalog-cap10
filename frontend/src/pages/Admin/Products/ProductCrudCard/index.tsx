@@ -1,5 +1,4 @@
 import './styles.css';
-//import ProductPrice from './components/ProductPrice';
 import ProductPrice from 'components/ProductPrice';
 
 import { Product } from 'types/product';
@@ -21,20 +20,19 @@ const ProductCrudCard = ({ product }: Props) => {
           <ProductPrice price={product.price} />
         </div>
         <div className="product-crud-categories-container">
-          {product.categories.map((category) =>(  
+          {product.categories.map((category) => (
             <CategoryBadge name={category.name} key={category.name} />
           ))}
         </div>
       </div>
       <div className="product-crud-card-buttons-container">
-        <button className="btn btn-outline-danger product-crud-card-button product-crud-card-button-first" >
-              EXCLUIR
+        <button className="btn btn-outline-danger product-crud-card-button product-crud-card-button-first">
+          EXCLUIR
         </button>
-        <button className="btn btn-outline-secondary product-crud-card-button" >
-              EDITAR
+        <button className="btn btn-outline-secondary product-crud-card-button">
+          EDITAR
         </button>
-
-        </div>
+      </div>
     </div>
   );
 };
